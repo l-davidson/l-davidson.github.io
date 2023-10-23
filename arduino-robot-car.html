@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Arduino Robot Car</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Lydia Davidson</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about-me.html">About Me</a></li>
+						<li><a href="arduino-robot-car.html" class="active">Arduino Robot Car</a></li>
+
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Arduino Robot Car</h1>
+
+							<span class="image fit"><img src="images/robot-car/robot-car3.jpeg" alt="" /></span>
+							
+							<h2>Overview</h2>
+							<p>
+								<ul>
+									<li>This project used an Arduino UNO to control the robot.</li>
+									<li>I designed the chassis using SolidWorks and then 3D-printed and assembled it.</li>
+									<li>I wrote several sketches using the Arduino IDE to program the robot for different
+										functionalities including:</li>
+									<ul style="padding-left: 40px;">
+										<li>Follow a 1.5" black line</li>
+										<li>Avoid obstacles</li>
+										<li>Follow a line and avoid obstacles placed on the line</li>
+										<li>Be controlled by a phone via Bluetooth</li>
+									</ul>
+								</ul>
+
+								Here is a link to a video of my robot in action:
+								<a href="https://youtu.be/bp98Rxfm5Ms">https://youtu.be/bp98Rxfm5Ms</a>
+							</p>
+							
+							<br>
+							<br>
+
+							<h2>Background</h2>
+							<p>
+								Growing up, I always wanted to build a robot. When I started UBC and discovered the Open Robotics
+								student design team which had a special program for first- and second-year students to teach them
+								about robotics, build their own robot, and compete in an intramural competition, I immediately
+								signed up. Unfortunately, due to the circumstances that year, the program was not carried through.
+								However, my eagerness to learn and to build my own robot persisted, so I decided to take on this
+								project on my own in the following summer. Therefore, some of the goals I had for the design stemmed
+								from the competition requirements for Open Robotics.
+							</p>
+
+							<h2>Project Goals</h2>
+							<p>
+								<ul>
+									<li>Follow a 1.5" black line while avoiding obstacles that are placed on the line.</li>
+									<li>Climb a 30 degree incline.</li>
+									<li>Cross a 25-mm gap using a castor ball with a 12-mm diameter.</li>
+									<li>Be controlled by a phone via Bluetooth.</li>
+								</ul>
+							</p>
+
+							<h2>Design Choices</h2>
+							<p>
+								<ul>
+									<li>
+										I decided to use a 2WD design so that there would be less friction when turning
+										and to allow for faster speeds with less power.
+									</li>
+									<li>
+										I put the two wheels at the back instead of the front to allow for smoother turns
+										when following the line.
+									</li>
+									<li>
+										I decided to use four 9V batteries in paralell instead of six AA batteries in series
+										since the 9V batteries could supply the same amount of power for a longer duration.
+									</li>
+									<li>
+										I placed the batteries directly over the axis of the back wheels to have better
+										traction and climb a steeper incline.
+									</li>
+								</ul>
+							</p>
+
+							<h2>Sketches</h2>
+							<p>Here are some of the sketches I made when designing the chassis:</p>
+
+							<figure>
+								<img src="images/robot-car/sketch-chassis.jpeg" width="70%">
+								<figcaption>Figure 1: Top-view sketch of the chassis.</figcaption>
+							</figure>
+
+							<br>
+							<br>
+
+							<div class="box alt">
+								<div class="row gtr-uniform">
+									<div class="col-4">
+										<img src="images/robot-car/sketch-battery-holder.jpeg" alt="" width="100%"/>
+										<figcaption>Figure 2: Sketch of the 9V battery holder.</figcaption>
+									</div>
+									<div class="col-4">
+										<img src="images/robot-car/sketch-castor-ball.jpeg" alt="" width="145%"/>
+										<figcaption>Figure 3: Sketch of the attachment for the castor ball.</figcaption>
+									</div>
+								</div>
+							</div>
+
+							<h2>Diagram</h2>
+							<p>Here is the diagram that I created and followed for wiring the components.</p>
+							<img src="images/robot-car/diagram.png" width="60%">
+							<figcaption>Figure 4: Schematic for Arduino car.</figcaption>
+
+							<br>
+
+							<h2>Results</h2>
+							<p>
+								<ul>
+									<li>Crossed a 25-mm gap using a castor ball with a 12-mm diameter.</li>
+									<li>Climbed a 27-degree incline.</li>
+									<li>Followed a 1.5" black line.</li>
+									<li>Avoided obstables.</li>
+									<li>Followed a 1.5" black line while avoiding obstacles placed on the line.</li>
+									<li>Could be controlled by a phone via Bluetooth using an app I created with MIT App Inventor.</li>
+								</ul>
+							</p>
+
+						</div>
+					</section>
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
