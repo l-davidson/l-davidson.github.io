@@ -11,6 +11,18 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			.column2 {
+			float: left;
+			width: 40%;
+			padding: 40px;
+			}
+			.row::after {
+			content: "";
+			clear: both;
+			display: table;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -38,7 +50,7 @@
 
 							<p style="font-size: xx-large;">[UNDER CONSTRUCTION]</p>
 
-							<span class="image fit"><img src="images/enph253-robots/enph253-robots-front.jpeg" alt="" /></span>
+							<span class="image fit"><img src="images/enph253-robots/enph253-robots-front-wide.jpeg" alt="" /></span>
 							
 							<h2>Overview</h2>
 							<p>
@@ -77,9 +89,23 @@
 								editing the software. 
 							</p>
 
-							<h2>Competition Details</h2>
+							<div class="box alt">
+								<div class="row gtr-uniform">
+									<div class="col-4">
+										<img src="images/enph253-robots/claw-top-view-CAD.png" alt="" width="100%"/>
+										<figcaption>Figure 1: Top view of the four-bar linkage claw design in Onshape.</figcaption>
+									</div>
+									<div class="col-4">
+										<img src="images/enph253-robots/robot-tray-CAD.png" alt="" width="162%"/>
+										<figcaption>Figure 2: Robot with moving tray in Onshape.</figcaption>
+									</div>
+								</div>
+							</div>  
+
+							<h2>Competition Rules</h2>
 							<p>
 								<!-- TODO -->
+								Below are some rules for the competition that had to be considered when designing the claw and tray.
 								<ul>
 									<li>Robots must not exceed 12”x18” in size (no height limit)</li>
 									<li>Robots cannot reach over the centre counter</li>
@@ -87,7 +113,24 @@
 								</ul>
 							</p>
 
-							<h2>Team Goals for the Project</h2>
+							<h2>Items to Pick Up</h2>
+							<!-- TODO - create a table with size & weight instead of bulleted list-->
+							<ul>
+								<li>Paper plate (~170mm diameter)</li>
+								<li>Top & bottom bun (90mm diameter)</li>
+								<li>Patty (80mm diameter)</li>
+								<li>Cheese (~76mm square)</li>
+								<li>Tomato (~76mm diameter)</li>
+								<li>Lettuce (~60mm x 76mm)</li>
+							</ul>
+
+							<!-- TODO - put image beside text instead of below -->
+							<img src="images/enph253-robots/burger-on-plate.jpeg" alt="" width="30%"/>
+							<figcaption>Figure 3: Paper plate with 3D-printed burger.</figcaption>
+							<br>
+							<br>
+
+							<!-- <h2>Team Goals for the Project</h2>
 							<p>
 								<ul>
 									<li>Make as many deluxe burgers as possible</li>
@@ -95,30 +138,41 @@
 										before time runs out</li>
 									<li></li>
 								</ul>
-							</p>
+							</p> -->
 
 							<h2>Claw Design</h2>
 							<p>
 								<ul>
-									<li>After brainstorming ideas as a team, we decided to use a four-bar linkage to clamp the food 
-										and plate. Advantages of the four-bar linkage claw design included:</li>
+									<li>After brainstorming ideas as a team, we decided to use a four-bar linkage driven by a servo motor to 
+										clamp the food and plate. Advantages of the four-bar linkage claw design included:</li>
 									<ul style="padding-left: 40px;">
 										<li>Ability to open wide, reducing the amount of accuracy required to line up the robot perfectly 
-											in front of the food</li>
+											in front of the food on the counters</li>
+										<li>Ability to pick up items of various sizes (i.e., plate and food of various sizes)</li>
 										<li>Links stay perfectly parallel while closing, so the two points of contact should always be on 
 											either side of the clamped food, so the food should never be pushed inwards or outwards when 
 											the claw closes</li>
-										<li>Ability to pick up items of various sizes (i.e., plate and food of various sizes)</li>
 									</ul>
-									<li>The four-bar linkage was made of aluminum sheet metal for lightness and bent into a U shape to add 
-										strength and reduce bending </li>
+									<li>The four-bar linkage was partly made of aluminum sheet metal for lightness and bent into a U shape 
+										to add strength and reduce bending</li>
+									<li>The four-bar linkage also had two parts made of acrylic, allowing it to be laser cut into a rounded 
+										shape to wrap around the rods that were on either side of the lead screw for support. Laser cutting 
+										acrylic also allowed the links and gears to be one piece.</li>
 									<li>3D-printed pieces were attached to the end of the four-bar linkage with softer material glued to it 
 										for gripping the items</li>
-									<li>To allow for upward and downward movement, the four-bar linkage was attached to a nut that fit on a 
-										lead screw driven by a DC motor</li>
+									<li>To allow for upward and downward movement in order to pick up food at counter height and stack them
+										on another part of the counter, as well as to account for slight variances in counter height, the 
+										four-bar linkage was attached to a nut that fit on a lead screw driven by a DC motor</li>
 									<li>A microswitch was placed on the bottom of the four-bar linkage to signal the DC motor to stop when 
 										the claw had lowered down to counter height</li>
-									<li></li>
+									<li>A piece of MDF was laser cut to act as the base plate for the four-bar linkage.</li>
+									<li>Rod busings (for the rods that acted as support on either side of the lead screw) and pieces to hold 
+										the nut for the lead screw were 3D-printed and attached to the piece of MDF.</li>
+									<li>A 3D-printed piece (which also held the servo motor) was secured on top of the gears that drove the 
+										four-bar linkage to counter the upward force created by the weight of the four-bar linkage 
+										(and any items picked up).
+									</li>
+									
 								</ul>
 							</p>
 
@@ -144,7 +198,7 @@
 								<li>Monitored the current draw of the servo and DC motors when clamping items using a power supply</li>
 								<li>Wrote code to test how much each item needed to be over-clamped to balance having enough grip without 
 									drawing too much current</li>
-								<li></li>
+								<li>Tested that the DC motor controlled the lead screw would stop moving the claw downwards once the microswitch hit the counter.</li>
 
 							</ul>
 
@@ -157,14 +211,41 @@
 								<li>Loosened the locknuts on the joints and adjusted the size of the spacers inside the U shape of the 
 									sheet metal to decrease the friction in the joints and thereby decreasing the torque (and current 
 									draw) required by the servo motor</li>
+								<li>Modified the shape of the rod bushings that attached to the MDF (where the base of the four-bar 
+									linkage attached) so that the four-bar linkage could retract further to fit within the 12" size limit</li>
 								<li></li>
 							</ul>
 
+							<div class="box alt">
+								<div class="row gtr-uniform">
+									<div class="col-4">
+										<video controls width="70%" type="video/mp4"><source src="videos/enph253-robots/claw-clamping-test-stack-burger.mp4"></video>
+										<figcaption>Video 1: Testing claw's ability to pick up each item.</figcaption>
+									</div>
+									<div class="col-4">
+										<video controls width="70%" type="video/mp4"><source src="videos/enph253-robots/claw-clamping-burger-plate-with-sponge.mp4"></video>
+										<figcaption>Video 2: Testing claw's ability to pick up a plate with a burger on it, after adding a sponge to the 3D-printed pieces.</figcaption>
+									</div>
+									<div class="col-4">
+										<video controls width="70%" type="video/mp4"><source src="videos/enph253-robots/claw-test-with-DC-motor.mp4"></video>
+										<figcaption>Video 3: Testing the DC motor controlling the lead screw, which makes the claw go up and down.</figcaption>
+									</div>
+								</div>
+							</div>  
+
 							<h2>Tray Design</h2>
+							<p>[under construction</p>
 
 							<h2>Tests Performed on the Tray</h2>
+							<p>[under construction]</p>
 
-							<h2>Overview of Non-Mechanical Work</h2>
+							<!-- <h2>Overview of Non-Mechanical Work</h2>
+							<ul>
+								<li>Helped with wiring</li>
+								<li>Reviewed the software code and made modifications while troubleshooting (our team used the Arduino 
+									framework with PlatformIO in VS Code)
+								</li>
+							</ul> -->
 
 							<h2>Results</h2>
 							<p>
