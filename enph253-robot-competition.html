@@ -21,8 +21,9 @@
 					<ul>
 						<li><a href="index.html">Home</a></li>
 						<li><a href="about-me.html">About Me</a></li>
-						<li><a href="arduino-robot-car.html" class="active">Arduino Robot Car</a></li>
+						<li><a href="arduino-robot-car.html">Arduino Robot Car</a></li>
 						<li><a href="enph253-robot-competition.html" class="active">ENPH 253 Robot Competition</a></li>
+						<li><a href="phone-holder-SMS.html">Cell-phone Holder</a></li>
 					</ul>
 				</nav>
 			</header>
@@ -35,51 +36,157 @@
 						<div class="inner">
 							<h1 class="major">ENPH 253 Robot Competition</h1>
 
+							<p style="font-size: xx-large;">[UNDER CONSTRUCTION]</p>
+
 							<span class="image fit"><img src="images/enph253-robots/enph253-robots-front.jpeg" alt="" /></span>
 							
 							<h2>Overview</h2>
 							<p>
-								<!-- TODO -->
+								<!-- TODO - review -->
+								In the ENPH 253 Introduction to Instrument Design course, taken by second-year Engineering Physics 
+								students at UBC during the summer, my peers and I were challenged to build two autonomous robots to 
+								play a unique version of the video game Overcooked. In the game, multiple chefs collaborate to serve 
+								as many meals as possible within a limited time. In our edition, two robots had designated areas they 
+								could navigate in and food they could reach, requiring them to collaborate to make different recipes 
+								on the menu. After 6 weeks of working the lab for nearly 12 hours every weekday, the teams of 3-4 
+								students set their robots on the start line of the competition surface and watched their robot chefs 
+								go head-to-head against another team. Each recipe was worth a different number of points based on 
+								difficulty, and the team whose robots could score the most points in a two-minute round would win 
+								the competition.
 							</p>
 							
-							<br>
-							<br>
+							
+
+							<h2>My Role</h2>
+							<p>
+								<!-- TODO - review -->
+								My team consisted of four students and my primary role was to work on the mechanical design and 
+								construction of the robots' claws. I used SolidWorks and Onshape to make 3D sketches and assemblies, 
+								analyze the motion of moving parts, and make calculations. 
+								<br>
+								<br>
+								As time allowed, I proceeded to design and build a tray that would sit on one of the robots and move 
+								inwards and outwards. The moving tray allowed the robot to carry the plate with food while navigating 
+								through the kitchen, thereby speeding up its ability to make an item on the menu. My role extended to 
+								writing functions in software to implement the use of the tray. 
+								<br>
+								<br>
+								In the final 1-2 weeks before the competition, I helped my team with the full integration of the robots, 
+								which mostly included helping with wiring as well as attaching the claws and moving tray to the robot 
+								chassis. I also helped test and troubleshoot the robots, which involved troubleshooting circuits and 
+								editing the software. 
+							</p>
 
 							<h2>Competition Details</h2>
 							<p>
 								<!-- TODO -->
+								<ul>
+									<li>Robots must not exceed 12”x18” in size (no height limit)</li>
+									<li>Robots cannot reach over the centre counter</li>
+									<li></li>
+								</ul>
 							</p>
 
 							<h2>Team Goals for the Project</h2>
 							<p>
 								<ul>
-									<li> <!-- TODO --> </li>
+									<li>Make as many deluxe burgers as possible</li>
+									<li>Make cheese plates and/or salads if there is not enough time to make another deluxe burger 
+										before time runs out</li>
+									<li></li>
 								</ul>
 							</p>
 
-							<h2>Design Choices</h2>
+							<h2>Claw Design</h2>
 							<p>
 								<ul>
-									<li>
-										<!-- TODO -->
-									</li>
-									<li>
-										<!-- TODO -->
-									</li>
+									<li>After brainstorming ideas as a team, we decided to use to a four-bar linkage to clamp the food 
+										and plate. Advantages of the four-bar linkage claw design included:</li>
+									<ul style="padding-left: 40px;">
+										<li>Ability to open wide, reducing the amount of accuracy required to line up the robot perfectly 
+											in front of the food</li>
+										<li>Links stay perfectly parallel while closing, so the two points of contact should always be on 
+											either side of the clamped food, so the food should never be pushed inwards or outwards when 
+											the claw closes</li>
+										<li>Ability to pick up items of various sizes (i.e., plate and food of various sizes)</li>
+									</ul>
+									<li>The four-bar linkage was made of aluminum sheet metal for lightness and bent into a U shape to add 
+										strength and reduce bending </li>
+									<li>3D-printed pieces were attached the end of the four-bar linkage with softer material glued to it for 
+										gripping the items</li>
+									<li>To allow for upward and downward movement, the four-bar linkage was attached to a nut that fit on a 
+										lead screw driven by a DC motor</li>
+									<li>A microswitch was placed on the bottom of the four-bar linkage to signal the DC motor to stop when 
+										the claw had lowered down to counter height</li>
+									<li></li>
 								</ul>
 							</p>
 
-							<h2>CAD</h2>
-							<p><!-- TODO - description? --></p>
+							<h2>Tools Used</h2>
+							<p>As I prototyped the claw, I learned and gained experience using various tools and machines including:</p>
+							<ul>
+								<li>Sheet metal tools: bending brake, hand seamer, plate shear, hole punch</li>
+								<li>Hand drill</li>
+								<li>Hacksaw and coping saw</li>
+								<li>3D printer</li>
+								<li>Laser cutter</li>
+							</ul>
+							
 
+							<h2>Tests Performed on the Claw</h2>
+							<p>I tested the claw in isolation from the rest of the robot to ensure it was capable of what I intended 
+								and to make improvements before integrating it with the rest of the robot.
+							</p>
+
+							<h3>Some tests I did include:</h3>
+							<ul>
+								<li>Testing the claw's ability to pick up all the food items and the plate</li>
+								<li>Monitored the current draw of the servo and DC motors when clamping items using a power supply</li>
+								<li>Wrote code to test how much each item needed to be over-clamped to balance having enough grip without 
+									drawing too much current</li>
+								<li></li>
+
+							</ul>
+
+							<h3>Some improvements I made include:</h3>
+							<ul>
+								<li>Added a sponge to the 3D-printed pieces on the four-bar linkage, which could mold around the items  
+									being clamped. This improved the claw's ability to grip the plate with food on it (without bending 
+									the plate), the top bun (which was heavier than other food items and shaped like a dome), and the 
+									cheese</li>
+								<li>Loosened the locknuts on the joints and adjusted the size of the spacers inside the U shape of the 
+									sheet metal to decrease the friction in the joints and thereby decreasing the torque (and current 
+									draw) required by the servo motor</li>
+								<li></li>
+							</ul>
+
+							<h2>Tray Design</h2>
+
+							<h2>Tests Performed on the Tray</h2>
+
+							<h2>Overview of Non-Mechanical Work</h2>
 
 							<h2>Results</h2>
 							<p>
 								<ul>
-									<li> <!-- TODO --> </li>
-									<li> <!-- TODO --> </li>
+									<li>The claw was able to successfully pick up every food item and the plate without falling out of 
+										its grip, even when I shook it up & down and side to side</li>
+									<li>Isolated from the rest of the robot, the claw could lower to counter height, close to pick up an 
+										item, and raise a few centimeters in preparation to stack the food on the plate or into a burger</li>
+									<li></li>
 								</ul>
 							</p>
+
+							<h2>Additional Information</h2>
+							<h3>Team Project Report</h3>
+							<p>Above, I outlined my contribution to the robots that my team built. To see a report of our entire project, see </p>
+							<h3>ENPH 253 Robot Competition on the News</h3>
+							<ul>
+								<li><a href="https://globalnews.ca/video/10693009/ubc-engineering-students-test-their-skills-with-burger-flipping-robots/" target="_blank"><u>Global News</u></a></li>
+								<li><a href="https://bc.ctvnews.ca/ubc-students-compete-to-build-best-burger-serving-robots-1.6994251" target="_blank"><u>CTV News Vancouver</u></a></li>
+								<li><a href="https://vancouver.citynews.ca/2024/08/08/vancouver-engineering-ubc-burger-bots/" target="_blank"><u>CityNews Vancouver</u></a></li>
+								<li><a href="https://engineering.ubc.ca/news/2024/ubc-engineering-students-robots-cook-storm-annual-competition" target="_blank"><u>UBC Engineering News</u></a></li>
+							</ul>
 
 						</div>
 					</section>
