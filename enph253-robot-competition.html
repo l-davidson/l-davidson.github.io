@@ -170,11 +170,29 @@
 										the nut for the lead screw were 3D-printed and attached to the piece of MDF.</li>
 									<li>A 3D-printed piece (which also held the servo motor) was secured on top of the gears that drove the 
 										four-bar linkage to counter the upward force created by the weight of the four-bar linkage 
-										(and any items picked up).
+										and the items it picked up.
 									</li>
-									
+									<li>The rod bushings were made as long (down the rod) and wide (at the base where it connects to the MDF) 
+										as possible to also counter the force created by the weight of the four-bar linkage and the items it 
+										picked up.
+									</li>
 								</ul>
 							</p>
+
+							<div class="box alt">
+								<div class="row gtr-uniform">
+									<div class="col-4">
+										<img src="images/enph253-robots/claw-isolated-top-view-acrylic.jpeg" alt="" width="100%"/>
+										<figcaption>Figure 4: Top view of the four-bar linkage showing acrylic links.</figcaption>
+									</div>
+									<div class="col-4">
+										<img src="images/enph253-robots/claw-isolate-top-view-with-servo-and-ruler.jpeg" alt="" width="87%"/>
+										<figcaption>Figure 5: Top view of four-bar linkage showing 3D-printed plate and servo motor on top 
+											of gears and sponges added to the 3D-printed pieces at the ends of the metal links.
+										</figcaption>
+									</div>
+								</div>
+							</div>  
 
 							<h2>Tools Used</h2>
 							<p>As I prototyped the claw, I learned and gained experience using various tools and machines including:</p>
@@ -199,7 +217,6 @@
 								<li>Wrote code to test how much each item needed to be over-clamped to balance having enough grip without 
 									drawing too much current</li>
 								<li>Tested that the DC motor controlled the lead screw would stop moving the claw downwards once the microswitch hit the counter.</li>
-
 							</ul>
 
 							<h3>Some improvements I made include:</h3>
@@ -213,28 +230,33 @@
 									draw) required by the servo motor</li>
 								<li>Modified the shape of the rod bushings that attached to the MDF (where the base of the four-bar 
 									linkage attached) so that the four-bar linkage could retract further to fit within the 12" size limit</li>
-								<li></li>
+								<li>Adjusted the side of the rod bushings to find better balance between being loose enough to slide smoothly but tight enough 
+									to have minimal play (to keep the four-bar linkage as horizontal as possible)
+								</li>
 							</ul>
 
+							<!-- Videos from testing -->
+							<h3>Videos From Testing</h3>
+							<p>Below are some videos I took when I tested the claw.</p>
 							<div class="box alt">
 								<div class="row gtr-uniform">
 									<div class="col-4">
-										<video controls width="70%" type="video/mp4"><source src="videos/enph253-robots/claw-clamping-test-stack-burger.mp4"></video>
+										<video controls width="100%" type="video/mp4"><source src="videos/enph253-robots/claw-clamping-test-stack-burger.mp4"></video>
 										<figcaption>Video 1: Testing claw's ability to pick up each item.</figcaption>
 									</div>
 									<div class="col-4">
-										<video controls width="70%" type="video/mp4"><source src="videos/enph253-robots/claw-clamping-burger-plate-with-sponge.mp4"></video>
+										<video controls width="100%" type="video/mp4"><source src="videos/enph253-robots/claw-clamping-burger-plate-with-sponge.mp4"></video>
 										<figcaption>Video 2: Testing claw's ability to pick up a plate with a burger on it, after adding a sponge to the 3D-printed pieces.</figcaption>
 									</div>
 									<div class="col-4">
-										<video controls width="70%" type="video/mp4"><source src="videos/enph253-robots/claw-test-with-DC-motor.mp4"></video>
+										<video controls width="100%" type="video/mp4"><source src="videos/enph253-robots/claw-test-with-DC-motor.mp4"></video>
 										<figcaption>Video 3: Testing the DC motor controlling the lead screw, which makes the claw go up and down.</figcaption>
 									</div>
 								</div>
 							</div>  
 
 							<h2>Tray Design</h2>
-							<p>[under construction</p>
+							<p>[under construction]</p>
 
 							<h2>Tests Performed on the Tray</h2>
 							<p>[under construction]</p>
@@ -250,11 +272,18 @@
 							<h2>Results</h2>
 							<p>
 								<ul>
+									<li>The joints had very little play in them, allowing for precise and accurate movements of the four-bar linkage</li>
+									<li>The rod bushings were sized such that they could slide smoothly along the rods while keeping the four-bar linkage 
+										nearly perfectly parallel with the ground
+									</li>
 									<li>The claw was able to successfully pick up every food item and the plate without falling out of 
 										its grip, even when I shook it up & down and side to side</li>
 									<li>Isolated from the rest of the robot, the claw could lower to counter height, close to pick up an 
 										item, and raise a few centimeters in preparation to stack the food on the plate or into a burger</li>
-									<li></li>
+									<li>The tray could successfully move inwards and outwards in a sequence with the movement of the four-bar linkage 
+										that would allow one of the robots to make a simple burger (plate, bottom bun, patty, top bun) directly on the 
+										tray while moving from counter to counter 
+									</li>
 								</ul>
 							</p>
 
