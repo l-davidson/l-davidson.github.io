@@ -48,7 +48,7 @@
 						<div class="inner">
 							<h1 class="major">ENPH 253 Robot Competition</h1>
 
-							<p style="font-size: xx-large;">[UNDER CONSTRUCTION]</p>
+							<p style="font-size: xx-large;">[WEBPAGE UNDER CONSTRUCTION]</p>
 
 							<span class="image fit"><img src="images/enph253-robots/enph253-robots-front-wide.jpeg" alt="" /></span>
 							
@@ -107,9 +107,11 @@
 								<!-- TODO -->
 								Below are some rules for the competition that had to be considered when designing the claw and tray.
 								<ul>
-									<li>Robots must not exceed 12”x18” in size (no height limit)</li>
-									<li>Robots cannot reach over the centre counter</li>
-									<li></li>
+									<li>Robots must not exceed 12”x18” in size (no height limit) when arms are retracted</li>
+									<li>Robots cannot reach beyond the far edge of each counter (i.e., a robot cannot reach over 
+										the centre counter)
+									</li>
+									<li>Countertops are 6" high (robots must be able to accommodate to slight inaccuracies)</li>
 								</ul>
 							</p>
 
@@ -256,10 +258,62 @@
 							</div>  
 
 							<h2>Tray Design</h2>
-							<p>[under construction]</p>
+							<p>A sliding tray that could extend and retract was designed for one of the robots to carry the plate and food 
+								as it navigated through the kitchen.
+							</p>
+							<ul>
+								<li>A rack and pinion, driven by a continuous servo motor, allowed the tray to slide outward and inward 
+									on a set of drawer slides
+								</li>
+								<li>The tray had to slide outward and inward in order to meet the size restrictions of the robot and to 
+									allow the robot to go up to the counter and reach to pick up food</li>
+								<li>The tray was 3D-printed, allowing the tray and L-shaped slide mounting pieces to be printed 
+									as one piece. It was necessary to not have any bolt heads or nuts above the top surface of the tray, 
+									as it might interfere with the claw (when picking up the plate from the tray). While a countersink would 
+									have been another option, it was not possible due to the long queue for other manufacturing methods and 
+									the short timeline of the project.</li>
+								<li>Ribs were printed on the bottom surface of the tray to increase strength and reduce bending</li>
+								<li>A rubbery material was glued to the top of the tray to keep the plate from sliding around while 
+									the robot navigated through the kitchen
+								</li>
+								<li>The rack and pinion were also 3D-printed due to delays in with other manufacturing methods. 
+									3D-printing allowed the rack and L-shaped slide mounting pieces to be printed as one piece (similar to 
+									the tray).
+								</li>
+								<li>A microswitch was plated on the top of the robot chassis to re-home the continuous servo when it 
+									was drawn inward. The distance that the tray extended was determined by the time (in microseconds) 
+									that the motor was turned on for.
+								</li>
+							</ul>
+							
 
-							<h2>Tests Performed on the Tray</h2>
-							<p>[under construction]</p>
+							<h2>Tests Performed for the Tray</h2>
+							<p>I tested the setup for the tray on the top piece of the chassis before everything else was attached, allowing 
+								me to make quick and easy adjustments. Below is a list of things I did during testing.
+							</p>
+							<ul>
+								<li>Wrote code to calibrate and test the continuous servo on its own</li>
+								<li>Tested the continuous servo's ability to drive the rack back and forth when attached to the drawer 
+									slides and tray</li>
+								<li>Adjusted the size of the rack and pinion for better meshing of the teeth</li>
+								<li>Tested how well the paper plate would stay on the tray while it was moving back and forth</li>
+								<li>Adjusted the time delay in the code that the continuous servo was turned on so that the desired 
+									extension was obtained
+								</li>
+							</ul>
+							<p>I calibrated and tested the continous motor and its ability to slide the tray outward and inward on the top piece of the 
+								robot chassis, before everything else was attached. Testing it in isolation allowed me to easily make size 
+								adjustments to some pieces and validate that the design worked as intended.
+								<br>
+								<br>
+								Below is a video I took after writing basic code for the continuous servo to test the setup.
+							</p>
+							
+							<video controls width="50%" type="video/mp4"><source src="videos/enph253-robots/robot-tray-test.mp4"></video>
+							<figcaption>Video 4: Testing the sliding tray driven by the continuous servo motor.</figcaption>
+
+							<p>After testing that the tray design worked, I wrote software functions that implemented the use of the tray 
+								when making different recipes (e.g., a salad or burger).
 
 							<!-- <h2>Overview of Non-Mechanical Work</h2>
 							<ul>
